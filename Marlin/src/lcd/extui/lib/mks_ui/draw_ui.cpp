@@ -580,6 +580,8 @@ void Draw_default_preview(int xpos_pixel, int ypos_pixel, uint8_t sel) {
         if (i >= 8000) break;
       }
     #else
+        int x_off = 0;
+        uint16_t temp_p;
       ili9320_SetWindows(xpos_pixel, y_off * 20 + ypos_pixel, 200, 20);     //200*200
 
       LCD_WriteRAM_Prepare();
@@ -932,16 +934,16 @@ void clear_cur_ui() {
       //Clear_Tips();
       break;
     case MACHINE_PARA_UI:
-      //Clear_MachinePara();
+      lv_clear_machine_para();
       break;
     case MACHINE_SETTINGS_UI:
-      //Clear_MachineSettings();
+      lv_clear_machine_settings();
       break;
     case TEMPERATURE_SETTINGS_UI:
       //Clear_TemperatureSettings();
       break;
     case MOTOR_SETTINGS_UI:
-      //Clear_MotorSettings();
+      lv_clear_motor_settings();
       break;
     case MACHINETYPE_UI:
       //Clear_MachineType();
@@ -971,16 +973,18 @@ void clear_cur_ui() {
       //Clear_XYZLevelPara();
       break;
     case MAXFEEDRATE_UI:
-      //Clear_MaxFeedRate();
+      lv_clear_max_feedrate_settings();
       break;
     case STEPS_UI:
-      //Clear_Steps();
+      lv_clear_step_settings();
       break;
     case ACCELERATION_UI:
-      //Clear_Acceleration();
+      lv_clear_acceleration_settings();
       break;
     case JERK_UI:
-      //Clear_Jerk();
+      #if HAS_CLASSIC_JERK
+        lv_clear_jerk_settings();
+      #endif
       break;
     case MOTORDIR_UI:
       //Clear_MotorDir();
@@ -995,7 +999,7 @@ void clear_cur_ui() {
       //Clear_HotbedConfig();
       break;
     case ADVANCED_UI:
-      //Clear_Advanced();
+      lv_clear_advance_settings();
       break;
     case DOUBLE_Z_UI:
       //Clear_DoubleZ();
@@ -1004,11 +1008,27 @@ void clear_cur_ui() {
       //Clear_EnableInvert();
       break;
     case NUMBER_KEY_UI:
-      //Clear_NumberKey();
+      lv_clear_number_key();
       break;
     case BABY_STEP_UI:
       //Clear_babyStep();
       break;
+    case PAUSE_POS_UI:
+      lv_clear_pause_position();
+      break;
+      #if HAS_TRINAMIC_CONFIG
+        case TMC_CURRENT_UI:
+          lv_clear_tmc_current_settings();
+          break;
+      #endif
+    case EEPROM_SETTINGS_UI:
+      lv_clear_eeprom_settings();
+      break;
+      #if HAS_STEALTHCHOP
+        case TMC_MODE_UI:
+          lv_clear_tmc_step_mode_settings();
+          break;
+      #endif
     default:
       break;
   }
@@ -1131,16 +1151,16 @@ void draw_return_ui() {
         //draw_Tips();
         break;
       case MACHINE_PARA_UI:
-        //draw_MachinePara();
+        lv_draw_machine_para();
         break;
       case MACHINE_SETTINGS_UI:
-        //draw_MachineSettings();
+        lv_draw_machine_settings();
         break;
       case TEMPERATURE_SETTINGS_UI:
         //draw_TemperatureSettings();
         break;
       case MOTOR_SETTINGS_UI:
-        //draw_MotorSettings();
+        lv_draw_motor_settings();
         break;
       case MACHINETYPE_UI:
         //draw_MachineType();
@@ -1170,16 +1190,18 @@ void draw_return_ui() {
         //draw_XYZLevelPara();
         break;
       case MAXFEEDRATE_UI:
-        //draw_MaxFeedRate();
+        lv_draw_max_feedrate_settings();
         break;
       case STEPS_UI:
-        //draw_Steps();
+        lv_draw_step_settings();
         break;
       case ACCELERATION_UI:
-        //draw_Acceleration();
+        lv_draw_acceleration_settings();
         break;
       case JERK_UI:
-        //draw_Jerk();
+        #if HAS_CLASSIC_JERK
+          lv_draw_jerk_settings();
+        #endif
         break;
       case MOTORDIR_UI:
         //draw_MotorDir();
@@ -1194,7 +1216,7 @@ void draw_return_ui() {
         //draw_HotbedConfig();
         break;
       case ADVANCED_UI:
-        //draw_Advanced();
+        lv_draw_advance_settings();
         break;
       case DOUBLE_Z_UI:
         //draw_DoubleZ();
@@ -1203,7 +1225,7 @@ void draw_return_ui() {
         //draw_EnableInvert();
         break;
       case NUMBER_KEY_UI:
-        //draw_NumberKey();
+        lv_draw_number_key();
         break;
       case DIALOG_UI:
         //draw_dialog(DialogType);
@@ -1211,6 +1233,22 @@ void draw_return_ui() {
       case BABY_STEP_UI:
         //draw_babyStep();
         break;
+      case PAUSE_POS_UI:
+        lv_draw_pause_position();
+        break;
+        #if HAS_TRINAMIC_CONFIG
+          case TMC_CURRENT_UI:
+            lv_draw_tmc_current_settings();
+            break;
+        #endif
+      case EEPROM_SETTINGS_UI:
+        lv_draw_eeprom_settings();
+        break;
+        #if HAS_STEALTHCHOP
+          case TMC_MODE_UI:
+            lv_draw_tmc_step_mode_settings();
+            break;
+        #endif
       default: break;
     }
   }

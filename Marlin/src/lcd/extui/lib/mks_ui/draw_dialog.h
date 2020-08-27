@@ -65,6 +65,10 @@ extern "C" { /* C-declarations for C++ */
 #define DIALOG_PAUSE_MESSAGE_HEATING                30
 #define DIALOG_PAUSE_MESSAGE_OPTION                 31
 
+#define DIALOG_STORE_EEPROM_TIPS                    32
+#define DIALOG_READ_EEPROM_TIPS                     33
+#define DIALOG_REVERT_EEPROM_TIPS                   34
+
 #define BTN_OK_X      100
 #define BTN_OK_Y      180
 #define BTN_CANCEL_X  280

@@ -48,6 +48,7 @@
 #if ENABLED(PARK_HEAD_ON_PAUSE)
   #include "../../../../feature/pause.h"
 #endif
+#include "../../../../gcode/gcode.h"
 
 static lv_obj_t * scr;
 extern uint8_t sel_id;
@@ -148,6 +149,21 @@ static void btn_ok_event_cb(lv_obj_t * btn, lv_event_t event) {
         draw_return_ui();
       }
     #endif
+    else if (DialogType == DIALOG_STORE_EEPROM_TIPS) {
+      gcode.process_subcommands_now_P(PSTR("M500"));
+      clear_cur_ui();
+      draw_return_ui();
+    }
+    else if (DialogType == DIALOG_READ_EEPROM_TIPS) {
+      gcode.process_subcommands_now_P(PSTR("M501"));
+      clear_cur_ui();
+      draw_return_ui();
+    }
+    else if (DialogType == DIALOG_REVERT_EEPROM_TIPS) {
+      gcode.process_subcommands_now_P(PSTR("M502"));
+      clear_cur_ui();
+      draw_return_ui();
+    }
   }
 }
 
@@ -336,6 +352,18 @@ void lv_draw_dialog(uint8_t type) {
   }
   else if (DialogType == DIALOG_PAUSE_MESSAGE_OPTION) {
     lv_label_set_text(labelDialog, pause_msg_menu.option);
+    lv_obj_align(labelDialog, NULL, LV_ALIGN_CENTER, 0, -20);
+  }
+  else if (DialogType == DIALOG_STORE_EEPROM_TIPS) {
+    lv_label_set_text(labelDialog, eeprom_menu.storeTips);
+    lv_obj_align(labelDialog, NULL, LV_ALIGN_CENTER, 0, -20);
+  }
+  else if (DialogType == DIALOG_READ_EEPROM_TIPS) {
+    lv_label_set_text(labelDialog, eeprom_menu.readTips);
+    lv_obj_align(labelDialog, NULL, LV_ALIGN_CENTER, 0, -20);
+  }
+  else if (DialogType == DIALOG_REVERT_EEPROM_TIPS) {
+    lv_label_set_text(labelDialog, eeprom_menu.revertTips);
     lv_obj_align(labelDialog, NULL, LV_ALIGN_CENTER, 0, -20);
   }
 }

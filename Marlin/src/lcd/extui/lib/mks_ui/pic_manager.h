@@ -32,22 +32,25 @@ extern "C" { /* C-declarations for C++ */
 #include "../../inc/MarlinConfigPre.h"
 
 #ifndef HAS_SPI_FLASH_FONT
-  #define HAS_SPI_FLASH_FONT              0 //disabled until fix the font load code
+  #define HAS_SPI_FLASH_FONT              1 // Disabled until fix the font load code
 #endif
 #ifndef HAS_GCODE_PREVIEW
   #define HAS_GCODE_PREVIEW               1
 #endif
 #ifndef HAS_LANG_SELECT_SCREEN
-  #define HAS_LANG_SELECT_SCREEN               0
+  #define HAS_LANG_SELECT_SCREEN          1
 #endif
 #ifndef HAS_BAK_VIEW_IN_FLASH
-  #define HAS_BAK_VIEW_IN_FLASH               1
+  #define HAS_BAK_VIEW_IN_FLASH           1
 #endif
 #ifndef HAS_GCODE_DEFAULT_VIEW_IN_FLASH
-  #define HAS_GCODE_DEFAULT_VIEW_IN_FLASH               1
+  #define HAS_GCODE_DEFAULT_VIEW_IN_FLASH 1
+#endif
+#ifndef HAS_LOGO_IN_FLASH
+  #define HAS_LOGO_IN_FLASH 1
 #endif
 #ifndef SPI_FLASH_SIZE
-  #define SPI_FLASH_SIZE                  0x1000000 // 16MB
+  #define SPI_FLASH_SIZE                0x1000000 // 16MB
 #endif
 
 #define PIC_MAX_CN           100    // Maximum number of pictures
@@ -82,6 +85,10 @@ extern "C" { /* C-declarations for C++ */
   #define PIC_DATA_ADDR_TFT32             0x00F000
   #define PIC_ICON_LOGO_ADDR_TFT32        0x5D8000
   #define PIC_OTHER_SIZE_ADDR_TFT32       0x5EE000
+
+  // font
+  #define FONTINFOADDR                  0x183000 // 6M -- font addr
+  #define UNIGBK_FLASH_ADDR            (FONTINFOADDR+4096) // 4*1024
 
 #else
   //pic
@@ -137,6 +144,7 @@ typedef struct pic_msg PIC_MSG;
 #define FONT_SIZE_xM  2
 
 extern void Pic_Read(uint8_t *Pname, uint8_t *P_Rbuff);
+extern void Pic_Logo_Read(uint8_t *LogoName,uint8_t *Logo_Rbuff,uint32_t LogoReadsize);
 extern void lv_pic_test(uint8_t *P_Rbuff, uint32_t addr, uint32_t size);
 extern uint32_t lv_get_pic_addr(uint8_t *Pname);
 extern void get_spi_flash_data(const char *rec_buf, int offset, int size);

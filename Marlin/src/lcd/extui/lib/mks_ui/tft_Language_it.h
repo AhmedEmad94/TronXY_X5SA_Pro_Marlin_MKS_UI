@@ -98,6 +98,8 @@
 #define MOTOR_OFF_TEXT_IT                                       "Motor off"
 #define MOTOR_OFF_XY_TEXT_IT    "Off-XY"
 #define SHUTDOWN_TEXT_IT                                        "Spento"
+#define MACHINE_PARA_IT               "Config"
+#define EEPROM_SETTINGS_IT            "Eeprom Set"
 
 #define U_DISK_TEXT_IT                                          "USB"
 #define SD_CARD_TEXT_IT                                         "SD"
@@ -269,3 +271,7 @@
 #define MESSEGE_OPTION_IT                       "Eliminare di più o continuare a stampare?"
 #define MESSEGE_PURGE_MORE_IT   "Epurazione"
 #define MESSEGE_CONTINUE_PRINT_IT   "Stampa"
+#define EEPROM_SETTINGS_TITLE_IT          "Impostazioni EEPROM"
+#define EEPROM_SETTINGS_STORE_IT          "Memorizzare le impostazioni su EEPROM"
+#define EEPROM_SETTINGS_READ_IT           "Leggi le impostazioni dalla EEPROM"
+#define EEPROM_SETTINGS_REVERT_IT         "Ripristina le impostazioni predefinite di fabbrica"

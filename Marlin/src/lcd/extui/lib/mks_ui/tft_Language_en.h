@@ -28,7 +28,7 @@
 #define PREVIOUS_EN             "Previous"
 #define DEFAULT_EN              "Default"
 #define KEY_BACK_EN             "Del"
-#define KEY_REST_EN             "Rest"
+#define KEY_REST_EN             "Reset"
 #define KEY_CONFIRM_EN          "Confirm"
 
 #define KEYBOARD_KEY0_EN "0"
@@ -158,6 +158,8 @@
 #define ACCELERATION_CONF_EN            "Acceleration settings"
 #define JERKCONF_EN                     "Jerk settings"
 #define STEPSCONF_EN                    "Steps settings"
+#define TMC_CURRENT_EN                  "TMC Current settings"
+#define TMC_STEP_MODE_EN                "TMC Step mode settings"
 #define MOTORDIRCONF_EN                 "Motor direction settings"
 #define HOMEFEEDRATECONF_EN             "Home speed setting"
 
@@ -191,6 +193,20 @@
 #define E0_STEPS_EN                     "E0-axis steps"
 #define E1_STEPS_EN                     "E1-axis steps"
 
+#define TMC_CURRENT_CONF_TITLE_EN       "Machine Settings>TMC current settings"
+#define X_TMC_CURRENT_EN                "X axis current (mA)"
+#define Y_TMC_CURRENT_EN                "Y axis current (mA)"
+#define Z_TMC_CURRENT_EN                "Z axis current (mA)"
+#define E0_TMC_CURRENT_EN               "E0 axis current (mA)"
+#define E1_TMC_CURRENT_EN               "E1 axis current (mA)"
+
+#define TMC_MODE_CONF_TITLE_EN          "Machine Settings>TMC step mode settings"
+#define X_TMC_MODE_EN                   "Whether X axis enable stealthChop modes"
+#define Y_TMC_MODE_EN                   "Whether Y axis enable stealthChop modes"
+#define Z_TMC_MODE_EN                   "Whether Z axis enable stealthChop modes"
+#define E0_TMC_MODE_EN                  "Whether E0 axis enable stealthChop modes"
+#define E1_TMC_MODE_EN                  "Whether E1 axis enable stealthChop modes"
+
 #define MOTORDIR_CONF_TITLE_EN          "Machine Settings>Motor direction"
 #define X_MOTORDIR_EN                   "X-axis motor direction invert"
 #define Y_MOTORDIR_EN                   "Y-axis motor direction invert"
@@ -222,6 +238,11 @@
 #define Y_ENABLE_PINS_INVERT_EN         "Y_ENABLE_PIN_INVERT"
 #define Z_ENABLE_PINS_INVERT_EN         "Z_ENABLE_PIN_INVERT"
 #define E_ENABLE_PINS_INVERT_EN         "E_ENABLE_PIN_INVERT"
+
+#define PAUSE_POSITION_EN    "Printing pause position settings"
+#define PAUSE_POSITION_X_EN  "X axis position (Absolute position,-1 invalid)"
+#define PAUSE_POSITION_Y_EN  "Y axis position (Absolute position,-1 invalid)"
+#define PAUSE_POSITION_Z_EN  "Z axis position (Relative position,-1 invalid)"
 
 #define TOOL_TEXT_EN            "Tool"
 #define PREHEAT_TEXT_EN         "Preheat"
@@ -299,6 +320,7 @@
 #define MOTOR_OFF_TEXT_EN             "Motor-off"
 #define MOTOR_OFF_XY_TEXT_EN          "Off-XY"
 #define SHUTDOWN_TEXT_EN              "Shutdown"
+#define EEPROM_SETTINGS_EN            "Eeprom Set"
 
 #define U_DISK_TEXT_EN                "USB"
 #define SD_CARD_TEXT_EN               "SD"
@@ -716,3 +738,11 @@
 #define MESSEGE_OPTION_EN           "Purge more or continue print?"
 #define MESSEGE_PURGE_MORE_EN       "Purge"
 #define MESSEGE_CONTINUE_PRINT_EN   "Print"
+#define EEPROM_SETTINGS_TITLE_EN  "EEPROM Settings"
+#define EEPROM_SETTINGS_STORE_EN  "Store settings to EEPROM"
+#define EEPROM_SETTINGS_READ_EN   "Read settings from EEPROM"
+#define EEPROM_SETTINGS_REVERT_EN "Revert settings to factory defaults"
+
+#define EEPROM_STORE_TIPS_EN  "Store settings to EEPROM?"
+#define EEPROM_READ_TIPS_EN   "Read settings from EEPROM?"
+#define EEPROM_REVERT_TIPS_EN "Revert settings to factory defaults?"

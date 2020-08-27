@@ -414,6 +414,10 @@ void tft_lvgl_init() {
   W25QXX.init(SPI_QUARTER_SPEED);
   //test_id=W25QXX.W25QXX_ReadID();
 
+  gCfgItems_init();
+  ui_cfg_init();
+  disp_language_init();
+
   //init tft first!
   #if ENABLED(SPI_GRAPHICAL_TFT)
     SPI_TFT.spi_init(SPI_FULL_SPEED);

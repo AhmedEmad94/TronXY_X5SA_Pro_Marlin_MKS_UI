@@ -26,6 +26,8 @@
  */
 
 #include "../sd/cardreader.h"
+#include "../gcode/gcode.h"
+
 #include "../inc/MarlinConfig.h"
 
 #if ENABLED(MIXING_EXTRUDER)
@@ -45,6 +47,7 @@ typedef struct {
 
   // Machine state
   xyze_pos_t current_position;
+  float zraise;
 
   #if HAS_HOME_OFFSET
     xyz_pos_t home_offset;
@@ -161,7 +164,7 @@ class PrintJobRecovery {
     static inline void cancel() { purge(); card.autostart_index = 0; }
 
     static void load();
-    static void save(const bool force=ENABLED(SAVE_EACH_CMD_MODE));
+    static void save(const bool force=ENABLED(SAVE_EACH_CMD_MODE), const float zraise=0);
 
   #if PIN_EXISTS(POWER_LOSS)
     static inline void outage() {
@@ -186,6 +189,7 @@ class PrintJobRecovery {
   #endif
 
   #if PIN_EXISTS(POWER_LOSS)
+      friend class GcodeSuite;
     static void _outage();
   #endif
 };
