@@ -135,10 +135,6 @@ static bool ensure_safe_temperature(const PauseMode mode=PAUSE_MODE_SAME) {
   #endif
 
   return thermalManager.wait_for_hotend(active_extruder);
-  while (ABS(thermalManager.degHotend(active_extruder) - thermalManager.degTargetHotend(active_extruder)) > TEMP_WINDOW)
-    idle();
-
-  return true;
 }
 
 /**

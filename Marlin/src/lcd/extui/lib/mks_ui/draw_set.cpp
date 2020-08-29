@@ -188,7 +188,7 @@ void lv_draw_set(void) {
     lv_imgbtn_set_style(buttonFan, LV_BTN_STATE_PR, &tft_style_lable_pre);
     lv_imgbtn_set_style(buttonFan, LV_BTN_STATE_REL, &tft_style_lable_rel);
 
-    lv_obj_set_event_cb_mks(buttonAbout, event_handler, ID_S_ABOUT, "bmp_About.bin", 0);
+    lv_obj_set_event_cb_mks(buttonAbout, event_handler, ID_S_ABOUT, "bmp_about.bin", 0);
     lv_imgbtn_set_src(buttonAbout, LV_BTN_STATE_REL, &bmp_pic);
     lv_imgbtn_set_src(buttonAbout, LV_BTN_STATE_PR, &bmp_pic);
     lv_imgbtn_set_style(buttonAbout, LV_BTN_STATE_PR, &tft_style_lable_pre);
@@ -210,7 +210,7 @@ void lv_draw_set(void) {
     lv_imgbtn_set_style(buMotorOff, LV_BTN_STATE_REL, &tft_style_lable_rel);
 
     #if HAS_LANG_SELECT_SCREEN
-      lv_obj_set_event_cb_mks(buttonLanguage, event_handler, ID_S_LANGUAGE, "bmp_Language.bin", 0);
+      lv_obj_set_event_cb_mks(buttonLanguage, event_handler, ID_S_LANGUAGE, "bmp_language.bin", 0);
       lv_imgbtn_set_src(buttonLanguage, LV_BTN_STATE_REL, &bmp_pic);
       lv_imgbtn_set_src(buttonLanguage, LV_BTN_STATE_PR, &bmp_pic);
       lv_imgbtn_set_style(buttonLanguage, LV_BTN_STATE_PR, &tft_style_lable_pre);
@@ -227,7 +227,7 @@ void lv_draw_set(void) {
     lv_imgbtn_set_src(buttonEepromSet, LV_BTN_STATE_PR, &bmp_pic);
     lv_imgbtn_set_style(buttonEepromSet, LV_BTN_STATE_PR, &tft_style_lable_pre);
     lv_imgbtn_set_style(buttonEepromSet, LV_BTN_STATE_REL, &tft_style_lable_rel);
-    lv_obj_set_event_cb_mks(buttonBack, event_handler, ID_S_RETURN, "bmp_Return.bin", 0);
+    lv_obj_set_event_cb_mks(buttonBack, event_handler, ID_S_RETURN, "bmp_return.bin", 0);
     lv_imgbtn_set_src(buttonBack, LV_BTN_STATE_REL, &bmp_pic);
     lv_imgbtn_set_src(buttonBack, LV_BTN_STATE_PR, &bmp_pic);
     lv_imgbtn_set_style(buttonBack, LV_BTN_STATE_PR, &tft_style_lable_pre);

@@ -187,11 +187,8 @@ void machine_setting_disp() {
     machine_menu.AccelerationConf = ACCELERATION_CONF_EN;
     machine_menu.JerkConf         = JERKCONF_EN;
     machine_menu.StepsConf        = STEPSCONF_EN;
-    machine_menu.TMCcurrentConf   = TMC_CURRENT_EN;
-    machine_menu.TMCStepModeConf  = TMC_STEP_MODE_EN;
     machine_menu.MotorDirConf     = MOTORDIRCONF_EN;
     machine_menu.HomeFeedRateConf = HOMEFEEDRATECONF_EN;
-    machine_menu.PausePosition    = PAUSE_POSITION_EN;
 
     machine_menu.MaxFeedRateConfTitle = MAXFEEDRATE_CONF_TITLE_EN;
     machine_menu.XMaxFeedRate         = X_MAXFEEDRATE_EN;
@@ -222,20 +219,6 @@ void machine_setting_disp() {
     machine_menu.Z_Steps        = Z_STEPS_EN;
     machine_menu.E0_Steps       = E0_STEPS_EN;
     machine_menu.E1_Steps       = E1_STEPS_EN;
-
-    machine_menu.TmcCurrentConfTitle = TMC_CURRENT_CONF_TITLE_EN;
-    machine_menu.X_Current           = X_TMC_CURRENT_EN;
-    machine_menu.Y_Current           = Y_TMC_CURRENT_EN;
-    machine_menu.Z_Current           = Z_TMC_CURRENT_EN;
-    machine_menu.E0_Current          = E0_TMC_CURRENT_EN;
-    machine_menu.E1_Current          = E1_TMC_CURRENT_EN;
-
-    machine_menu.TmcStepModeConfTitle = TMC_MODE_CONF_TITLE_EN;
-    machine_menu.X_StepMode           = X_TMC_MODE_EN;
-    machine_menu.Y_StepMode           = Y_TMC_MODE_EN;
-    machine_menu.Z_StepMode           = Z_TMC_MODE_EN;
-    machine_menu.E0_StepMode          = E0_TMC_MODE_EN;
-    machine_menu.E1_StepMode          = E1_TMC_MODE_EN;
 
     machine_menu.MotorDirConfTitle = MOTORDIR_CONF_TITLE_EN;
     machine_menu.X_MotorDir        = X_MOTORDIR_EN;
@@ -275,11 +258,6 @@ void machine_setting_disp() {
     //
     machine_menu.high_level = MOTOR_EN_HIGH_LEVEL_EN;
     machine_menu.low_level  = MOTOR_EN_LOW_LEVEL_EN;
-
-    machine_menu.PausePosText = PAUSE_POSITION_EN;
-    machine_menu.xPos         = PAUSE_POSITION_X_EN;
-    machine_menu.yPos         = PAUSE_POSITION_Y_EN;
-    machine_menu.zPos         = PAUSE_POSITION_Z_EN;
   }
 }
 

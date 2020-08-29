@@ -52,7 +52,6 @@
 #undef DEBUG_POS
 #undef DEBUG_XYZ
 #undef DEBUG_DELAY
-#undef DEBUG_SYNCHRONIZE
 
 #if DEBUG_OUT
 
@@ -84,7 +83,6 @@
   #define DEBUG_POS               SERIAL_POS
   #define DEBUG_XYZ               SERIAL_XYZ
   #define DEBUG_DELAY(ms)         serial_delay(ms)
-  #define DEBUG_SYNCHRONIZE()     planner.synchronize()
 
 #else
 
@@ -112,9 +110,8 @@
   #define DEBUG_EOL()               NOOP
   #define DEBUG_FLUSH()             NOOP
   #define DEBUG_POS(...)            NOOP
-  #define DEBUG_XYZ(...)            NOOPs
+  #define DEBUG_XYZ(...)            NOOP
   #define DEBUG_DELAY(...)          NOOP
-  #define DEBUG_SYNCHRONIZE()       NOOP
 
 #endif
 

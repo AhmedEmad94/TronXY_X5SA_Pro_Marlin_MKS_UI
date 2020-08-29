@@ -934,16 +934,16 @@ void clear_cur_ui() {
       //Clear_Tips();
       break;
     case MACHINE_PARA_UI:
-      lv_clear_machine_para();
+      //lv_clear_machine_para();
       break;
     case MACHINE_SETTINGS_UI:
-      lv_clear_machine_settings();
+      //lv_clear_machine_settings();
       break;
     case TEMPERATURE_SETTINGS_UI:
       //Clear_TemperatureSettings();
       break;
     case MOTOR_SETTINGS_UI:
-      lv_clear_motor_settings();
+      //lv_clear_motor_settings();
       break;
     case MACHINETYPE_UI:
       //Clear_MachineType();
@@ -973,17 +973,17 @@ void clear_cur_ui() {
       //Clear_XYZLevelPara();
       break;
     case MAXFEEDRATE_UI:
-      lv_clear_max_feedrate_settings();
+      //lv_clear_max_feedrate_settings();
       break;
     case STEPS_UI:
-      lv_clear_step_settings();
+      //lv_clear_step_settings();
       break;
     case ACCELERATION_UI:
-      lv_clear_acceleration_settings();
+      //lv_clear_acceleration_settings();
       break;
     case JERK_UI:
       #if HAS_CLASSIC_JERK
-        lv_clear_jerk_settings();
+        //lv_clear_jerk_settings();
       #endif
       break;
     case MOTORDIR_UI:
@@ -999,7 +999,7 @@ void clear_cur_ui() {
       //Clear_HotbedConfig();
       break;
     case ADVANCED_UI:
-      lv_clear_advance_settings();
+      //lv_clear_advance_settings();
       break;
     case DOUBLE_Z_UI:
       //Clear_DoubleZ();
@@ -1008,25 +1008,25 @@ void clear_cur_ui() {
       //Clear_EnableInvert();
       break;
     case NUMBER_KEY_UI:
-      lv_clear_number_key();
+      //lv_clear_number_key();
       break;
     case BABY_STEP_UI:
       //Clear_babyStep();
       break;
     case PAUSE_POS_UI:
-      lv_clear_pause_position();
+      //lv_clear_pause_position();
       break;
       #if HAS_TRINAMIC_CONFIG
         case TMC_CURRENT_UI:
-          lv_clear_tmc_current_settings();
+          //lv_clear_tmc_current_settings();
           break;
       #endif
     case EEPROM_SETTINGS_UI:
-      lv_clear_eeprom_settings();
+      //lv_clear_eeprom_settings();
       break;
       #if HAS_STEALTHCHOP
         case TMC_MODE_UI:
-          lv_clear_tmc_step_mode_settings();
+          //lv_clear_tmc_step_mode_settings();
           break;
       #endif
     default:
@@ -1151,16 +1151,16 @@ void draw_return_ui() {
         //draw_Tips();
         break;
       case MACHINE_PARA_UI:
-        lv_draw_machine_para();
+        //lv_draw_machine_para();
         break;
       case MACHINE_SETTINGS_UI:
-        lv_draw_machine_settings();
+        //lv_draw_machine_settings();
         break;
       case TEMPERATURE_SETTINGS_UI:
         //draw_TemperatureSettings();
         break;
       case MOTOR_SETTINGS_UI:
-        lv_draw_motor_settings();
+        //lv_draw_motor_settings();
         break;
       case MACHINETYPE_UI:
         //draw_MachineType();
@@ -1190,17 +1190,17 @@ void draw_return_ui() {
         //draw_XYZLevelPara();
         break;
       case MAXFEEDRATE_UI:
-        lv_draw_max_feedrate_settings();
+        //lv_draw_max_feedrate_settings();
         break;
       case STEPS_UI:
-        lv_draw_step_settings();
+        //lv_draw_step_settings();
         break;
       case ACCELERATION_UI:
-        lv_draw_acceleration_settings();
+        //lv_draw_acceleration_settings();
         break;
       case JERK_UI:
         #if HAS_CLASSIC_JERK
-          lv_draw_jerk_settings();
+          //lv_draw_jerk_settings();
         #endif
         break;
       case MOTORDIR_UI:
@@ -1216,7 +1216,7 @@ void draw_return_ui() {
         //draw_HotbedConfig();
         break;
       case ADVANCED_UI:
-        lv_draw_advance_settings();
+        //lv_draw_advance_settings();
         break;
       case DOUBLE_Z_UI:
         //draw_DoubleZ();
@@ -1225,7 +1225,7 @@ void draw_return_ui() {
         //draw_EnableInvert();
         break;
       case NUMBER_KEY_UI:
-        lv_draw_number_key();
+        //lv_draw_number_key();
         break;
       case DIALOG_UI:
         //draw_dialog(DialogType);
@@ -1234,19 +1234,19 @@ void draw_return_ui() {
         //draw_babyStep();
         break;
       case PAUSE_POS_UI:
-        lv_draw_pause_position();
+        //lv_draw_pause_position();
         break;
         #if HAS_TRINAMIC_CONFIG
           case TMC_CURRENT_UI:
-            lv_draw_tmc_current_settings();
+            //lv_draw_tmc_current_settings();
             break;
         #endif
       case EEPROM_SETTINGS_UI:
-        lv_draw_eeprom_settings();
+        //lv_draw_eeprom_settings();
         break;
         #if HAS_STEALTHCHOP
           case TMC_MODE_UI:
-            lv_draw_tmc_step_mode_settings();
+            //lv_draw_tmc_step_mode_settings();
             break;
         #endif
       default: break;
